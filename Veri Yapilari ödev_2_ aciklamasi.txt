@@ -1,0 +1,49 @@
+02160001016
+AYÞE ÖZAVCÝ
+-----------------------
+
+Yaptigim odevde kompleks bir veri tipi tuttum ve bu veriyi AVL tree ve hash olmak uzere 2 tane veri yapisinda kullandim;
+
+Bu kompleks veri tipi bir ulkenin ;
+1)String tipinde ismini,
+2)int tipinde ulkenin numarasini,
+3)boolean tipinde bu ülkenin denize kiyisi var mi?
+
+seklinde 3 datayi tutuyor diyebilirim.
+
+Bunlar icin classlarda(HashIslemler ve AVL ) temel islemler olarak 4 islem kullandim.Yani ; 
+1)Eleman ekleme
+2)Eleman silme
+3)Eleman arama
+4)Eleman guncelleme
+5)Elemanlarý listeleme
+----------------------------------------------------------------------
+Classlar su sekilde;
+HashAgac ---> Main metodum,kullanicinin hangi veri tipinde islem yapmak istedigini sorduktan sonra temel islemlerden hangisini yapmak istedigini sordum.
+
+AVL --->  Agacla ilgili yaptigim islemler bu class da yer aliyor.(Yukarida yazdigim islemler + Dengeleme islemleri)
+
+Node ---> Node classinda agacin temel iskeletini olusturdum yani ulkenin ismi,ulkenin numarasi ve denize kiyisi olup olmadigi ile ilgili veri tipleri;
+
+HashNode ---> Hash icin kullandýgým class.Ayný sekilde ulkenin ismini,ulkenin numarasini ve denize kiyisi olup olmadigi ile ilgili veri tipleri;
+
+HashIslemler ---> Kullanicinin main sinifinda sectigi islem icin cagirdigim hash sinifi ve bagli listede her index icin yer ayirma islemi;
+
+BagliListe ---> Hash icin bagli liste islemleri;
+
+------------------------------------------------------------------------
+
+        Mod kullanilmamasi gerektigini duydugumdan basit bir matematiksel denklem oluþturdum.
+
+ Soyle;
+        Diyelimki UlkeNo : 34 , hash eleman sayisi 10;
+
+        Bu durumda 4.indise yerlesmesi gerekiyor;
+        UlkeNo/N dersem bolumu elde etmis olurum;
+        Bolum*Bolunen +kalan UlkeNo ya esit oldugundan ,
+        UlkeNo-bolum*N dersem kalani elde ederim.
+        
+Bu sekilde kalan'i elde ettim.
+----------------------------------------------------------------------
+
+NOT : YAZDIGIM METODLARDA (EKLEME,SILME,ARAMA,GUNCELLEME) RECURSIVE KULLANDIM.
